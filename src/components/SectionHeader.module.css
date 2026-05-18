@@ -1,0 +1,36 @@
+.wrap { margin-bottom: 48px; }
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: var(--green);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.line {
+  width: 32px;
+  height: 1px;
+  background: var(--green);
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 520px;
+}

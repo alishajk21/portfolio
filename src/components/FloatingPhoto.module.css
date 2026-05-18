@@ -1,0 +1,78 @@
+.wrapper {
+  position: relative;
+  width: 260px;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0f2a1a, #1a3a2a);
+  /* border: 1px solid #4ade8033; */
+  overflow: hidden;
+  position: relative;
+  animation: floatAnim 4s ease-in-out infinite;
+  /* box-shadow: 0 0 40px #4ade8022; */
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.emoji {
+  font-size: 64px;
+}
+
+.hint {
+  font-size: 11px;
+  color: #4ade8088;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.frame:hover .overlay {
+  opacity: 1;
+}
+
+.overlayText {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.badge {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  background: var(--green);
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: #022c0f;
+  font-weight: 600;
+}

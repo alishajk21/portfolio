@@ -1,0 +1,128 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.chipWrap {
+  position: relative;
+}
+
+.chipWrap:hover .removeBtn {
+  display: flex;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--bg-card);
+  border: 1px solid;
+  border-radius: 40px;
+  font-size: 13px;
+  color: #e2e8f0;
+  transition: transform 0.15s;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.removeBtn {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  background: #ef4444;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+}
+
+.addForm {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.iconInput {
+  width: 52px !important;
+  padding: 7px 8px !important;
+  text-align: center;
+  border-radius: 8px !important;
+}
+
+.nameInput {
+  width: 140px !important;
+  padding: 7px 10px !important;
+  border-radius: 8px !important;
+}
+
+.colorInput {
+  width: 36px !important;
+  height: 34px !important;
+  padding: 2px !important;
+  border-radius: 6px !important;
+  cursor: pointer;
+}
+
+.addBtn {
+  padding: 7px 16px;
+  background: var(--green);
+  border: none;
+  border-radius: 8px;
+  color: #022c0f;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: var(--font-body);
+  transition: opacity 0.15s;
+}
+
+.addBtn:hover { opacity: 0.85; }
+
+.cancelBtn {
+  padding: 7px 12px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-family: var(--font-body);
+  transition: border-color 0.15s;
+}
+
+.cancelBtn:hover { border-color: var(--border-light); }
+
+.newBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px dashed #4ade8044;
+  border-radius: 40px;
+  color: var(--green);
+  font-size: 13px;
+  font-family: var(--font-body);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.newBtn:hover {
+  border-color: #4ade8088;
+  background: #4ade8008;
+}
