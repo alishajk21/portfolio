@@ -37,7 +37,7 @@ export default function Navbar({
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.logo}>
-          <div className={styles.dot} />
+          <img src="/src/assets/logo.png" alt="Logo" />
         </div>
 
         {/* Desktop links */}

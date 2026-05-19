@@ -30,14 +30,9 @@
   gap: 8px;
   z-index: 101;
 }
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background: var(--green);
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-  flex-shrink: 0;
+.logo img {
+  width: 40px;
+  height: 40px;
 }
 
 .logoText {

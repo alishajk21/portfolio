@@ -498,7 +498,7 @@ export default function App() {
               <span style={{ color: 'var(--green)' }}>together.</span>
             </>
           }
-          subtitle="Have a project in mind or just want to say hi? Draft a message below — it'll open in your mail client."
+          subtitle="Have a project in mind or just want to say hi? Draft a message below - it'll open in your mail client."
         />
         <ContactSection email={data.email} />
       </section>
