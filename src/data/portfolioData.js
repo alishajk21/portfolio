@@ -7,6 +7,7 @@ export const portfolioData = {
   linkedin: 'https://www.linkedin.com/in/alisha-j-6b2656188/',
   resumeUrl: '/documents/resume.pdf',
   photo: '/images/profile.jpeg',
+  logo: '/logo.png',
 
   skills: [
     { name: 'ReactJS', icon: '⚛️', color: '#61dafb' },

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 
 export default function Navbar({
+  logo,
   linkedin,
   scrolled,
   activeSection,
@@ -37,7 +38,7 @@ export default function Navbar({
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.logo}>
-          <img src="/src/assets/logo.png" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </div>
 
         {/* Desktop links */}

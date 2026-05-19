@@ -72,7 +72,7 @@ export default function App() {
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); 
+    onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -103,6 +103,7 @@ export default function App() {
 
       {/* NAVBAR */}
       <Navbar
+        logo={data.logo}
         linkedin={data.linkedin}
         scrolled={scrolled}
         activeSection={activeSection}
