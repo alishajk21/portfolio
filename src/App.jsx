@@ -49,7 +49,6 @@ export default function App() {
       setScrolled(window.scrollY > 60);
       setShowScrollTop(window.scrollY > 400);
 
-      // Get Y position of each section and find which one is currently in view
       const scrollY = window.scrollY + window.innerHeight * 0.35;
 
       const offsets = Object.entries(sectionRefs).map(([key, ref]) => ({
@@ -59,14 +58,12 @@ export default function App() {
           : Infinity,
       }));
 
-      // Sort by top position, find the last section whose top is above the trigger point
       const sorted = offsets.sort((a, b) => a.top - b.top);
       let current = sorted[0].key;
       for (const { key, top } of sorted) {
         if (top <= scrollY) current = key;
       }
 
-      // Special case: near bottom of page → always highlight contact
       const nearBottom =
         window.innerHeight + window.scrollY >= document.body.scrollHeight - 80;
       if (nearBottom) current = 'contact';
@@ -75,7 +72,7 @@ export default function App() {
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // run once on mount
+    onScroll(); 
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -315,29 +312,6 @@ export default function App() {
               LinkedIn
             </a>
           </div>
-        </div>
-
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 32,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 6,
-            color: 'var(--text-faint)',
-          }}
-        >
-          <span style={{ fontSize: 10, letterSpacing: '0.15em' }}>SCROLL</span>
-          <div
-            style={{
-              width: 1,
-              height: 40,
-              background: 'linear-gradient(var(--text-faint), transparent)',
-            }}
-          />
         </div>
       </section>
 
